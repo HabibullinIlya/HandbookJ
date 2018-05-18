@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import com.gimba.handbookj.Entitys.Article;
+import com.gimba.handbookj.database.model.Article;
 
 import java.util.ArrayList;
 import java.util.List;

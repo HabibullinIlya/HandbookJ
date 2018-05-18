@@ -1,9 +1,8 @@
-package com.gimba.handbookj;
+package com.gimba.handbookj.controllers;
 
 import android.content.Context;
 
-import com.gimba.handbookj.Entitys.*;
-import com.gimba.handbookj.Entitys.Article;
+import com.gimba.handbookj.database.model.Article;
 import com.gimba.handbookj.database.ArticleController;
 
 import java.util.List;
