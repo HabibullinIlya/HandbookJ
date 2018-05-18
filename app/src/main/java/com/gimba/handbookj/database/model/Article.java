@@ -1,4 +1,4 @@
-package com.gimba.handbookj.Entitys;
+package com.gimba.handbookj.database.model;
 
 /**
  * Created by gimba on 16.05.2018.

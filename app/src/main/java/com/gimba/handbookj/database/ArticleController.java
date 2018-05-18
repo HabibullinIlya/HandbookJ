@@ -4,7 +4,7 @@ package com.gimba.handbookj.database;
 import android.content.ContentValues;
 import android.content.Context;
 
-import com.gimba.handbookj.Entitys.Article;
+import com.gimba.handbookj.database.model.Article;
 
 import java.util.List;
 
