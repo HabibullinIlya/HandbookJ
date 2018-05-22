@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.gimba.handbookj.R;
 import com.gimba.handbookj.database.model.Article;
+import com.gimba.handbookj.database.model.ArticleJsn;
 import com.gimba.handbookj.utils.OnItemClickListener;
 
 import java.util.List;
@@ -16,11 +17,13 @@ import java.util.List;
 public class ArticleAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private OnItemClickListener onItemClickListener;
-    private List<Article> articleList;
+    private List<ArticleJsn> articleList;
 
-    public ArticleAdapter(List<Article> articleList) {
+    public ArticleAdapter(List<ArticleJsn> articleList) {
         this.articleList = articleList;
     }
+
+
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -28,12 +31,6 @@ public class ArticleAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         return new ArticleVH(v);
     }
 
-    @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        ArticleVH articleVH = (ArticleVH) holder;
-        articleVH.articleHeader.setText(articleList.get(position).getName());
-        articleVH.articleText.setText(articleList.get(position).getTags());
-    }
 
     @Override
     public int getItemCount() {
@@ -42,6 +39,13 @@ public class ArticleAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
     public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
         this.onItemClickListener = onItemClickListener;
+    }
+
+    @Override
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+        ArticleVH articleVH = (ArticleVH) holder;
+        articleVH.articleHeader.setText(articleList.get(position).getNameActicle());
+        articleVH.articleText.setText(articleList.get(position).getTags());
     }
 
     private class ArticleVH extends RecyclerView.ViewHolder implements View.OnClickListener {
